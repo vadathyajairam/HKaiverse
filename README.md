@@ -1,6 +1,6 @@
-# HKaiverse
+# ClearFlow
 
-> **HKaiverse is a proposed digital workflow system designed to reduce manual effort, physical movement across departments, and the lack of status visibility in college No-Dues and clearance processing.**
+> **ClearFlow is a proposed digital workflow system designed to reduce manual effort, physical movement across departments, and the lack of status visibility in college No-Dues and clearance processing.**
 
 ---
 
@@ -86,7 +86,7 @@ Based on workflow analysis, the core operational inefficiencies are summarized i
 
 ## 5. Proposed Solution
 
-**HKaiverse** proposes replacing the physical paper workflow with a **centralized, digital clearance workflow system**.
+**ClearFlow** proposes replacing the physical paper workflow with a **centralized, digital clearance workflow system**.
 
 ### Key Concept
 * **Single Digital Submission**: The student submits one clearance request online via a web portal.
@@ -152,7 +152,7 @@ The proposed digital workflow separates verifications into **independent paralle
 
 ## 7. Before vs After Comparison
 
-| Aspect | Current Manual Workflow | Proposed Digital Workflow (HKaiverse) |
+| Aspect | Current Manual Workflow | Proposed Digital Workflow (ClearFlow) |
 | :--- | :--- | :--- |
 | **Request Submission** | Physical paper form collected and carried manually | Single digital submission via web portal |
 | **Department Coordination** | Student walks physically from building to building | Centralized digital workflow routing |
@@ -191,7 +191,7 @@ The proposed system architecture consists of standard, scalable web components:
 │   ┌─────────────────────────────────────────────────────────────┐       │
 │   │                   Central Database Store                    │       │
 │   │  • Clearance Requests    • Audit Logs    • Approver Roles   │       │
-│   └─────────────────────────────────────────────────────────────┘       │
+│   └──────────────────────────────┬──────────────────────────────┘       │
 └─────────────────────────────────────────────────────────────────────────┘
 ```
 
