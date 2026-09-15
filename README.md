@@ -1,6 +1,8 @@
-# ClearFlow
+# Nodexa
 
-> **ClearFlow is a proposed digital workflow system designed to reduce manual effort, physical movement across departments, and the lack of status visibility in college No-Dues and clearance processing.**
+> **Nodexa — Digital Campus Clearance & Workflow Automation**
+> 
+> *Nodexa is a proposed digital workflow system designed to reduce manual effort, physical movement across departments, and the lack of status visibility in college No-Dues and clearance processing.*
 
 ---
 
@@ -86,7 +88,7 @@ Based on workflow analysis, the core operational inefficiencies are summarized i
 
 ## 5. Proposed Solution
 
-**ClearFlow** proposes replacing the physical paper workflow with a **centralized, digital clearance workflow system**.
+**Nodexa** proposes replacing the physical paper workflow with a **centralized, digital clearance workflow system**.
 
 ### Key Concept
 * **Single Digital Submission**: The student submits one clearance request online via a web portal.
@@ -97,7 +99,7 @@ Based on workflow analysis, the core operational inefficiencies are summarized i
 
 ---
 
-## 6. Proposed Workflow (Dependency Analysis)
+## 6. Proposed Workflow Redesign (Dependency Analysis)
 
 The proposed digital workflow separates verifications into **independent parallel checks** and **dependent sequential checks**:
 
@@ -152,7 +154,7 @@ The proposed digital workflow separates verifications into **independent paralle
 
 ## 7. Before vs After Comparison
 
-| Aspect | Current Manual Workflow | Proposed Digital Workflow (ClearFlow) |
+| Aspect | Current Manual Workflow | Proposed Digital Workflow (Nodexa) |
 | :--- | :--- | :--- |
 | **Request Submission** | Physical paper form collected and carried manually | Single digital submission via web portal |
 | **Department Coordination** | Student walks physically from building to building | Centralized digital workflow routing |
@@ -207,7 +209,7 @@ The proposed system architecture consists of standard, scalable web components:
 
 ## 9. Where Automation Helps
 
-The primary value of the proposal comes from standard software automation, not artificial intelligence:
+The primary value of **Nodexa** comes from standard software automation, not artificial intelligence:
 
 * **Automated Request Routing**: Instantly notifies relevant departments when a new request is submitted.
 * **Dependency Rule Enforcement**: Automatically unlocks dependent approval steps only when prerequisite approvals are completed.
