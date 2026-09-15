@@ -66,7 +66,7 @@ The traditional clearance process follows a strict physical sequence governed by
 
 ## 3. What We Observed
 
-During field observation of the manual clearance process, the following empirical facts were noted:
+During field observation of the manual clearance process, the following operational dynamics were noted:
 
 1. **Paper Form as State Carrier**: The physical clearance paper form acts as the sole state-carrier. If the paper form is misplaced or damaged, the student must restart the process.
 2. **Disconnected Records**: While some departments maintain computer records (e.g., library management software or finance spreadsheets), these systems are not connected to a central clearance pipeline. Staff print physical lists or check local screens before stamping the student's paper slip.
@@ -80,7 +80,7 @@ During field observation of the manual clearance process, the following empirica
 The inefficiency of the manual clearance process is not simply that "manual work is slow." Workflow analysis reveals specific structural root causes:
 
 1. **Departments Are Poorly Coordinated**: Information exists in departmental silos. There is no shared communication protocol between offices.
-2. **Unnecessary Sequential Processing**: Independent verification checks (e.g., Library, Hostel, Sports) are executed sequentially solely because the paper form can only be in one physical location at a time.
+2. **Unnecessary Sequential Processing**: Independent verification checks (e.g., Library, Hostel, Sports) are executed sequentially solely because the paper form can only be in one physical location at a time. Independent checks can be processed in parallel where institutional dependencies allow.
 3. **Students Act as the Human Routing Layer**: The student is forced to act as the manual message-carrier between disconnected administrative offices.
 4. **Status Is Distributed Across Disconnected Offices**: Clearance status is scattered across local registers, making centralized tracking impossible without physical visits.
 5. **Staff Interruption Overhead**: Departmental staff spend substantial working hours answering routine status inquiries rather than processing verifications.
@@ -106,7 +106,7 @@ The inefficiency of the manual clearance process is not simply that "manual work
 ### How Nodexa Addresses the Root Causes
 * **Single Digital Submission**: The student submits one clearance request online via a web portal.
 * **Automated Task Creation**: Nodexa receives the request and creates digital verification tasks for all relevant departments.
-* **Dependency-Aware Parallel Routing**: Independent checks run simultaneously, eliminating unnecessary sequential delays.
+* **Dependency-Aware Parallel Routing**: Independent checks run in parallel where institutional dependencies allow, eliminating unnecessary sequential delays.
 * **Automated Dependency Management**: Prerequisite-gated approvals (e.g., Accounts, HOD) are held automatically until required prior checks are cleared.
 * **Digital Approver Dashboards**: Department staff review and approve/flag requests through secure digital interfaces.
 * **Real-Time Status Visibility**: Students and administrators track live progress via a centralized dashboard.
@@ -160,9 +160,9 @@ Nodexa separates departmental verifications into **independent parallel checks**
 
 ### Routing Logic Breakdown
 * **Independent Departments (Parallel Processing)**:
-  * *Library*, *Hostel*, and *Sports* verifications check distinct, non-overlapping records (books, room inventory, sports gear). Nodexa routes tasks to these three departments simultaneously upon request submission.
+  * *Library*, *Hostel*, and *Sports* verifications check distinct, non-overlapping records (books, room inventory, sports gear). Independent checks can be processed in parallel where institutional dependencies allow.
 * **Dependent Departments (Sequential Gating)**:
-  * *Accounts & Finance*: Requires resolution of any unpaid damage fines or dues flagged by Hostel or Labs before granting financial clearance.
+  * *Accounts & Finance*: May require resolution of unpaid damage fines or dues flagged by Hostel or Labs before granting financial clearance.
   * *HOD / Final Administration*: Requires all prior departmental clearances to be complete before granting final departmental certification.
 
 ---
@@ -247,14 +247,14 @@ To compare the manual baseline against Nodexa, workflow parameters were categori
 
 | Metric Parameter | Observed Manual Baseline | Prototype / Projected Outcome | Metric Classification | Status & Validation Note |
 | :--- | :--- | :--- | :--- | :--- |
-| **Total Processing Time** | 3 – 5 Days average turnaround | Projected: < 1 Day for clear cases | **Projected Estimate** | *Subject to institutional SLA validation* |
-| **Student Physical Visits** | 6+ office visits per student | Projected: 0 visits for clear cases | **Projected Estimate** | *Assumes digital approval adoption* |
-| **Staff Processing Time** | Manual ledger search (~15-20m) | Prototype: ~1-2m per digital review | **Prototype Benchmark** | *Measured during prototype testing* |
-| **Number of Status Inquiries** | High volume of desk inquiries | Projected: Significant reduction | **Projected Estimate** | *To be validated in pilot trials* |
-| **Number of Paper Forms** | 1 multi-page physical form + slips | 0 physical paper sheets | **Architectural Outcome** | *Achieved via digital NOC generation* |
-| **Number of Data Entries** | Re-typed across multiple registers | 1 central database record | **Architectural Outcome** | *Eliminated via single database store* |
+| **Total Processing Time** | 3 – 5 Days average turnaround | Projected: < 1 Day for clear cases | **Projected Estimate** | *Measurement methodology to be validated through further field observation.* |
+| **Student Physical Visits** | 6+ office visits per student | Projected: 0 visits for clear cases | **Projected Estimate** | *Measurement methodology to be validated through further field observation.* |
+| **Staff Processing Time** | Manual ledger search (~15-20m) | Prototype: ~1-2m per digital review | **Prototype Benchmark** | *Measured during prototype testing.* |
+| **Number of Status Inquiries** | High volume of desk inquiries | Projected: Significant reduction | **Projected Estimate** | *Measurement methodology to be validated through further field observation.* |
+| **Number of Paper Forms** | 1 multi-page physical form + slips | 0 physical paper sheets | **Architectural Outcome** | *Achieved via digital NOC generation.* |
+| **Number of Data Entries** | Re-typed across multiple registers | 1 central database record | **Architectural Outcome** | *Eliminated via single database store.* |
 
-*Note: Baseline timing estimates reflect observed workflow steps and prototype benchmarks. Real-world performance metrics are subject to validation through formal institutional field trials.*
+*Note: Measurement methodology to be validated through further field observation.*
 
 ---
 
@@ -263,7 +263,7 @@ To compare the manual baseline against Nodexa, workflow parameters were categori
 ### For Students
 * **Reduced Physical Effort**: Eliminates the need to walk long distances between campus offices.
 * **Transparent Visibility**: Provides a 24/7 status dashboard so students know exactly which department is reviewing their request.
-* **Faster Clearance Turnaround**: Independent departmental verifications execute in parallel rather than single-file queues.
+* **Faster Clearance Turnaround**: Independent departmental verifications execute in parallel where institutional dependencies allow.
 
 ### For Departmental Staff
 * **Fewer Interruptions**: Reduces in-person status inquiries, allowing staff to focus on verification tasks.
@@ -337,9 +337,9 @@ However, optional AI extensions could provide value in future system iterations:
 
 ## 17. Limitations & System Integration Requirements
 
-### Current Prototype Limitations
-* **Standalone Concept & UI Prototype**: This repository contains the project proposal and functional UI prototype. It is not currently connected to live production databases of any specific educational institution.
-* **Mocked Integration Data**: Departmental data sources (library catalogs, hostel registers, fee ledgers) are simulated for demonstration purposes.
+### Current Repository Scope & Prototype Limitations
+* **Proposed System & Architecture Document**: This repository contains the project proposal, technical specification, and architectural design.
+* **Integration Requirements**: Departmental data sources (library catalogs, hostel registers, fee ledgers) are simulated in concept and require backend connectors for production execution.
 
 ### Requirements for Institutional Deployment
 To deploy Nodexa in a live college environment, the following institutional integrations are required:
